@@ -1,0 +1,44 @@
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Album</th>
+      <th>Post</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each users as |user|}}
+      <tr>
+        <td>{{user.name}}</td>
+
+        <td>
+          {{#with (find-by 'userId' user.id albums) as |album|}}
+            {{#if album}}
+              {{album.title}}
+            {{/if}}
+          {{/with}}
+        </td>
+
+        <td class="post">
+          {{#with (find-by 'userId' user.id posts) as |post|}}
+            {{#if post}}
+              {{#if post.isEditing}}
+                {{input value=post.title disabled=post.isSaving}}
+              {{else}}
+                {{post.title}}
+              {{/if}}
+              <button {{action "edit" post}}>
+                {{if post.isSaving "SAVING..." (if post.isEditing "SAVE" "UPDATE")}}
+              </button>
+            {{/if}}
+          {{/with}}
+        </td>
+
+        <td>
+          <button {{action "delete" user}}>{{if user.isDeleted "DELETING..." "DELETE"}}</button>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
