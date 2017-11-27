@@ -21,6 +21,5 @@ test('it renders', function(assert) {
   assert.expect(1);
 
   this.render(hbs`{{main-page model=model}}`);
-  assert.equal(this.$('table').length, 1);
   assert.equal(this.$('tbody tr td:last-child button').length, 10);
 });
