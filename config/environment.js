@@ -8,7 +8,6 @@ module.exports = function(environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
-    namespace: '/api',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -32,10 +31,14 @@ module.exports = function(environment) {
     ENV.APP.rootElement = '#ember-testing';
   }
 
-  ENV.coreHost = 'https://jsonplaceholder.typicode.com/';
+  ENV.coreHost = 'https://jsonplaceholder.typicode.com';
 
   if (environment === 'development') {
     ENV['ember-cli-mirage'] = { enabled: false };
+  }
+
+  if (environment === 'local') {
+    ENV['ember-cli-mirage'] = { enabled: true };
   }
 
   if (environment === 'production') {

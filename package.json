@@ -13,9 +13,7 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember test",
-    "deploy-staging": "ember deploy staging",
-    "deploy-production": "ember deploy production"
+    "test": "ember test"
   },
   "dependencies": {
     "ember-cli-babel": "6.3.0"
@@ -24,7 +22,7 @@
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "3.0.0",
     "ember-browserify": "1.2.0",
-    "ember-cli": "~2.16.2",
+    "ember-cli": "2.15.1",
     "ember-cli-app-version": "3.0.0",
     "ember-cli-autoprefixer": "0.6.0",
     "ember-cli-dependency-checker": "^2.0.0",
@@ -47,6 +45,7 @@
     "ember-cli-test-loader": "^1.1.0",
     "ember-cli-uglify": "^2.0.0",
     "ember-component-css": "0.3.0",
+    "ember-composable-helpers": "1.1.2",
     "ember-data": "~2.16.2",
     "ember-export-application-global": "2.0.0",
     "ember-i18n": "5.0.0",
@@ -54,7 +53,7 @@
     "ember-inline-svg": "0.1.8",
     "ember-interpolate-helper": "1.0.0",
     "ember-load-initializers": "^1.0.0",
-    "ember-moment": "7.3.0",
+    "ember-native-dom-helpers": "0.5.0",
     "ember-resolver": "^4.0.0",
     "ember-route-action-helper": "2.0.2",
     "ember-source": "~2.16.0",

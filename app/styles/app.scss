@@ -1,0 +1,25 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+}
+
+button {
+  width: 60px;
+  height: 24px;
+}
+
+.post {
+  position: relative;
+  padding-right: 80px;
+
+  input {
+    width: 100%;
+  }
+
+  button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+}

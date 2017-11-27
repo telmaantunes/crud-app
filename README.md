@@ -24,7 +24,7 @@ $ git clone git@github.com:telmaantunes/crud-app.git
 $ npm i
 ```
 
-## Running the app
+## Running
 
 1. Run the app
 
@@ -34,7 +34,13 @@ $ ember server
 
 2. Go to http://localhost:4200/
 
-## Build
+## Testing
+
+```bash
+$ ember test
+```
+
+## Building
 
 ```bash
 $ ember build
